@@ -38,8 +38,3 @@ class PerishableProductProperties extends ProductProperties {
 // Creating instances of PerishableProductProperties
 const milk = new PerishableProductProperties("Milk", 1.50, 10, "2024-12-31");
 const bread = new PerishableProductProperties("Bread", 2.00, 20, "2024-01-15");
-
-// Adding a static method to the ProductProperties class
-class ProductProperties {
-    
-}
