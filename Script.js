@@ -16,3 +16,10 @@ class ProductProperties {
         return `Product: ${this.name}, Price: $${this.price.toFixed(2)}, Quantity: ${this.quantity}`;
     }
 }
+// Subclass: PerishableProductProperties
+class PerishableProductProperties extends ProductProperties {
+    constructor(name, price, quantity, expirationDate) {
+        super(name, price, quantity); // Call the constructor of the base class
+        this.expirationDate = expirationDate; // New property for expiration date
+    }
+}
