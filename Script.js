@@ -1,3 +1,4 @@
+//Part 1: Setting Up Classes
 // Base Class: ProductProperties
 class ProductProperties {
     //Constructor Method
