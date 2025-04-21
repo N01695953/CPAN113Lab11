@@ -61,3 +61,6 @@ class Store {
         return this.inventory.find(product => product.name === name) || null;
     }
 }
+
+//Testing the system
+let store = new Store();
