@@ -16,6 +16,7 @@ class ProductProperties {
         return `Product: ${this.name}, Price: $${this.price.toFixed(2)}, Quantity: ${this.quantity}`;
     }
 }
+//Part 2: Adding Inheritance
 // Subclass: PerishableProductProperties
 class PerishableProductProperties extends ProductProperties {
     constructor(name, price, quantity, expirationDate) {
