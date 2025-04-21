@@ -69,3 +69,10 @@ let store = new Store();
 const apple = new ProductProperties("Cookie", 2.50, 50);
 const orange = new ProductProperties("Cake", 1.75, 30);
 const cheese = new PerishableProductProperties("Potato", 3.00, 15, "2024-05-01");
+
+// Adding products to the store
+store.addProduct(Cookie);
+store.addProduct(Cake);
+store.addProduct(milk);
+store.addProduct(bread);
+store.addProduct(Potato);
