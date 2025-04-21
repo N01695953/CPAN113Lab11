@@ -44,8 +44,14 @@ class Store {
     constructor() {
         this.inventory = []; // Array to store products
     }
+
     // Method to add a product to the inventory
     addProduct(product) {
         this.inventory.push(product);
+    }
+    
+    // Method to get total value of all products in inventory
+    getInventoryValue() {
+        return this.inventory.reduce((total, product) => total + product.getTotalValue(), 0);
     }
 }
