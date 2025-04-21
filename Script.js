@@ -49,9 +49,14 @@ class Store {
     addProduct(product) {
         this.inventory.push(product);
     }
-    
+
     // Method to get total value of all products in inventory
     getInventoryValue() {
         return this.inventory.reduce((total, product) => total + product.getTotalValue(), 0);
+    }
+
+    // Method to find a product by its name
+    findProductByName(name) {
+        return this.inventory.find(product => product.name === name) || null;
     }
 }
