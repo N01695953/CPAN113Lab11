@@ -79,3 +79,6 @@ store.addProduct(Potato);
 
 // Print total inventory value before discount
 console.log("Total Inventory Value before discount: $", store.getInventoryValue().toFixed(2));
+
+// Apply a 15% discount
+ProductProperties.applyDiscount(store.inventory, 0.15);
