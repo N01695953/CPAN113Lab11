@@ -95,3 +95,24 @@ if (foundProduct) {
 } else {
     console.log("Product not found.");
 }
+
+// Display original prices
+const originalPricesDiv = document.getElementById('original-prices');
+products.forEach(product => {
+    const productDiv = document.createElement('div');
+    productDiv.className = 'product';
+    productDiv.textContent = product.toString();
+    originalPricesDiv.appendChild(productDiv);
+});
+
+// Apply a 15% discount
+ProductProperties.applyDiscount(products, 0.15);
+
+// Display prices after discount
+const discountedPricesDiv = document.getElementById('discounted-prices');
+products.forEach(product => {
+    const productDiv = document.createElement('div');
+    productDiv.className = 'product';
+    productDiv.textContent = product.toString();
+    discountedPricesDiv.appendChild(productDiv);
+});
