@@ -64,3 +64,8 @@ class Store {
 
 //Testing the system
 let store = new Store();
+
+// Creating products
+const apple = new ProductProperties("Cookie", 2.50, 50);
+const orange = new ProductProperties("Cake", 1.75, 30);
+const cheese = new PerishableProductProperties("Potato", 3.00, 15, "2024-05-01");
