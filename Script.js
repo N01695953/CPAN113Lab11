@@ -6,4 +6,8 @@ class ProductProperties {
         this.price = price; //Price of the product.
         this.quantity = quantity; //Quantity available in stock.
     }
+    // Method to calculate total value of the product in stock
+    getTotalValue() {
+        return this.price * this.quantity;
+    }
 }
