@@ -66,9 +66,9 @@ class Store {
 let store = new Store();
 
 // Creating products
-const apple = new ProductProperties("Cookie", 2.50, 50);
-const orange = new ProductProperties("Cake", 1.75, 30);
-const cheese = new PerishableProductProperties("Potato", 3.00, 15, "2024-05-01");
+const Cookie = new ProductProperties("Cookie", 2.50, 50);
+const Cake = new ProductProperties("Cake", 1.75, 30);
+const Potato = new PerishableProductProperties("Potato", 3.00, 15, "2024-05-01");
 
 // Adding products to the store
 store.addProduct(Cookie);
@@ -76,3 +76,6 @@ store.addProduct(Cake);
 store.addProduct(milk);
 store.addProduct(bread);
 store.addProduct(Potato);
+
+// Print total inventory value before discount
+console.log("Total Inventory Value before discount: $", store.getInventoryValue().toFixed(2));
