@@ -15,6 +15,12 @@ class ProductProperties {
     toString() {
         return `Product: ${this.name}, Price: $${this.price.toFixed(2)}, Quantity: ${this.quantity}`;
     }
+    //Part 3: Static Methods and Properties
+    static applyDiscount(products, discount) {
+        products.forEach(product => {
+            product.price -= product.price * discount; // Apply discount
+        });
+    }
 }
 
 //Part 2: Adding Inheritance
@@ -27,12 +33,6 @@ class PerishableProductProperties extends ProductProperties {
     // Override toString method to include expiration date
     toString() {
         return `${super.toString()}, Expiration Date: ${this.expirationDate}`;
-    }
-    //Part 3: Static Methods and Properties
-    static applyDiscount(products, discount) {
-        products.forEach(product => {
-            product.price -= product.price * discount; // Apply discount
-        });
     }
 }
 // Creating instances of PerishableProductProperties
@@ -62,6 +62,7 @@ class Store {
     }
 }
 
+//Part 5: Testing the System
 //Testing the system
 let store = new Store();
 
@@ -82,3 +83,15 @@ console.log("Total Inventory Value before discount: $", store.getInventoryValue(
 
 // Apply a 15% discount
 ProductProperties.applyDiscount(store.inventory, 0.15);
+
+// Print total inventory value after discount
+console.log("Total Inventory Value after discount: $", store.getInventoryValue().toFixed(2));
+
+// Find and print details of a specific product
+const productName = "Milk";
+const foundProduct = store.findProductByName(productName);
+if (foundProduct) {
+    console.log("Found Product:", foundProduct.toString());
+} else {
+    console.log("Product not found.");
+}
